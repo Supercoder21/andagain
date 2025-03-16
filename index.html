@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It Just Keeps Happening</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .small-text {
+            font-size: 1em;
+            margin-bottom: 10px;
+            opacity: 50%;
+        }
+        .big-text {
+            font-size: 5em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&family=Lobster&family=Pacifico&family=Raleway:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="https://example.com" class="big-text" id="again-text"> and again,</a>
+
+    <script>
+        function getRandomColor() {
+            return '#' + Math.floor(Math.random()*16777215).toString(16);
+        }
+
+        function getRandomFont() {
+            const fonts = [
+                "Arial", "Verdana", "Courier New", "Georgia", "Tahoma", "Times New Roman", "Impact",
+                "Roboto", "Montserrat", "Lobster", "Pacifico", "Raleway", "Playfair Display"
+            ];
+            return fonts[Math.floor(Math.random() * fonts.length)];
+        }
+
+        const againText = document.getElementById("again-text");
+        againText.style.color = getRandomColor();
+        againText.style.fontFamily = getRandomFont();
+    </script>
+</body>
+</html>
